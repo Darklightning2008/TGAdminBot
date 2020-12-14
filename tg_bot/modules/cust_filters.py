@@ -32,7 +32,9 @@ def list_handlers(bot: Bot, update: Update):
     if not conn == False:
         chat_id = conn
         chat_name = dispatcher.bot.getChat(conn).title
-        filter_list = "*Filters in {}:*\n"
+        chat = update.effective_chat.id
+        fcount = sql.num_filters_per_chat(chat)
+        filter_list = "*Filters in {}:\nTotal Filters: {}\n*".format(chat_name, fcount)
     else:
         chat_id = update.effective_chat.id
         if chat.type == "private":
@@ -40,7 +42,9 @@ def list_handlers(bot: Bot, update: Update):
             filter_list = "*local filters:*\n"
         else:
             chat_name = chat.title
-            filter_list = "*Filters in {}*:\n".format(chat_name)
+            chat = update.effective_chat.id
+            fcount = sql.num_filters_per_chat(chat)
+            filter_list = "*Filters in {}:\nTotal Filters: {}\n*".format(chat_name, fcount)
 
 
     all_handlers = sql.get_chat_triggers(chat_id)
