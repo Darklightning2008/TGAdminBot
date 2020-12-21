@@ -1,4 +1,4 @@
-Join In Our [Movie Group](https://t.me/TR_Official_Group)And [Get All Links Of Our Channels](https://t.me/tr_linkZ.
+Join In Our [Movie Group](https://t.me/TR_Official_Group)And [Get All Links Of Our Channels](https://t.me/tr_linkZ).
 
 Alternatively, [find me on telegram](https://t.me/qwertyclass)! (Keep all support questions in the support chat, where more people can help you.)
 
